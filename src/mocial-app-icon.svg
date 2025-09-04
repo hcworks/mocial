@@ -1,0 +1,72 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title>Mocial App Icon</title>
+<desc>Modern blue rounded-square icon featuring a continuous motion M mark with a forward arrow accent.</desc>
+
+<!-- Background: rounded square with modern blue gradient -->
+<defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e3a8a"/>
+        <stop offset="50%" stop-color="#2563eb"/>
+        <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+
+    <!-- Stroke gradient for the mark -->
+    <linearGradient id="mark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#e0f2fe" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+
+    <!-- Glow for the mark -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</defs>
+
+<!-- Rounded square background -->
+<rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg)" filter="url(#softShadow)"/>
+
+<!-- Subtle route ring for motion cue -->
+<path d="M256 96
+         A160 160 0 1 1 255.9 96" 
+      fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="16"/>
+
+<!-- Continuous motion M mark (single stroke) -->
+<g transform="translate(0,8)">
+    <!-- Outer glow -->
+    <path d="M128 332
+             C 160 204, 208 204, 240 264
+             S 320 324, 352 256
+             C 368 220, 400 220, 416 332" 
+          fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+    <!-- Main stroke -->
+    <path d="M128 332
+             C 160 204, 208 204, 240 264
+             S 320 324, 352 256
+             C 368 220, 400 220, 416 332" 
+          fill="none" stroke="url(#mark)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Waypoints (social nodes) -->
+    <circle cx="128" cy="332" r="8" fill="#ffffff" fill-opacity="0.95"/>
+    <circle cx="240" cy="264" r="7" fill="#ffffff" fill-opacity="0.9"/>
+    <circle cx="352" cy="256" r="7" fill="#ffffff" fill-opacity="0.9"/>
+
+    <!-- Forward arrow accent at the end of the path -->
+    <g transform="translate(416,332) rotate(-10)">
+        <path d="M0 0 L20 -10 L20 10 Z" fill="#e0f2fe" opacity="0.95"/>
+    </g>
+</g>
+
+<!-- Subtle highlight at top-left for premium feel -->
+<ellipse cx="170" cy="130" rx="120" ry="60" fill="#ffffff" fill-opacity="0.12"/>
+
+</svg>

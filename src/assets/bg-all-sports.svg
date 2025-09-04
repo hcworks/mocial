@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="40%" stop-color="#1d4ed8"/>
+      <stop offset="80%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="420" fill="url(#g)"/>
+
+  <!-- Decorative waves for depth -->
+  <g opacity="0.10" fill="none" stroke="#ffffff" stroke-width="2">
+    <path d="M0 360 C300 300, 600 380, 900 330 S1500 300, 1600 350"/>
+    <path d="M0 390 C280 340, 620 370, 940 390 S1400 410, 1600 400"/>
+  </g>
+
+  <!-- Icons row: cycle, running, hiking, golf, gym, pilates, yoga -->
+  <g fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cycle -->
+    <g transform="translate(140, 250)">
+      <circle cx="-40" cy="40" r="28"/>
+      <circle cx="40" cy="40" r="28"/>
+      <path d="M-40 40 L0 12 L40 40"/>
+      <path d="M-15 40 L15 40"/>
+    </g>
+
+    <!-- Running -->
+    <g transform="translate(360, 240)">
+      <circle cx="0" cy="-10" r="8"/>
+      <path d="M0 0 Q-6 16 2 28"/>
+      <path d="M2 14 Q16 10 22 18"/>
+      <path d="M2 28 Q-10 38 -6 48"/>
+      <path d="M22 18 Q30 28 36 30"/>
+    </g>
+
+    <!-- Hiking (mountains) -->
+    <g transform="translate(560, 260)">
+      <path d="M-40 60 L0 0 L40 60 Z"/>
+      <path d="M10 60 L50 -10 L90 60 Z"/>
+    </g>
+
+    <!-- Golf -->
+    <g transform="translate(800, 240)">
+      <circle cx="-10" cy="80" r="8" fill="#ffffff"/>
+      <path d="M20 -10 L20 70"/>
+      <path d="M20 -10 Q70 10 100 0"/>
+    </g>
+
+    <!-- Gym (barbell) -->
+    <g transform="translate(1000, 250)">
+      <rect x="-60" y="40" width="20" height="60" rx="4"/>
+      <rect x="40" y="40" width="20" height="60" rx="4"/>
+      <rect x="-30" y="60" width="80" height="24" rx="4"/>
+    </g>
+
+    <!-- Pilates (flow curve) -->
+    <g transform="translate(1240, 260)">
+      <path d="M-40 40 Q-10 0 20 40 Q50 80 80 40"/>
+    </g>
+
+    <!-- Yoga (pose) -->
+    <g transform="translate(1450, 250)">
+      <path d="M-20 80 Q-10 40 0 40 Q10 40 20 80"/>
+      <circle cx="0" cy="20" r="10"/>
+    </g>
+  </g>
+
+  <!-- Soft vignette -->
+  <rect width="1600" height="420" fill="url(#g)" opacity="0.05"/>
+</svg>
+
