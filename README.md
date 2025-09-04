@@ -1,28 +1,145 @@
-# Location Terms App
+# Mocial - 운동과 소셜의 만남
 
-## Overview
-The Location Terms App is a web application that provides users with clear and concise terms of use regarding the collection and usage of location information. This project aims to ensure transparency and user consent in the handling of location data.
+## 📱 프로젝트 개요
 
-## Project Structure
+**Mocial**은 운동과 소셜의 만남을 테마로 한 스마트 운동 관리 웹 애플리케이션입니다. 사용자들이 다양한 운동을 기록하고, 목표를 달성하며, 친구들과 경쟁하고 공유할 수 있는 플랫폼을 제공합니다.
+
+## ✨ 주요 기능
+
+### 🏃‍♂️ 스마트한 운동 관리
+- **다양한 운동 종목 지원**: 러닝, 자전거, 등산, 헬스, 요가, 골프 등
+- **목표 설정 및 추적**: 개인별 맞춤형 운동 목표 설정
+- **실시간 진행률 모니터링**: 목표 달성률과 진행 상황 시각화
+
+### 📊 상세한 통계 및 분석
+- **주간 운동 활동 차트**: 시간대별 운동 패턴 분석
+- **운동 종목별 분포**: 파이 차트를 통한 운동 유형별 통계
+- **개인 성과 대시보드**: 칼로리 소모, 거리, 시간 등 상세 기록
+
+### 🔗 다양한 기기 연동
+- **스마트 디바이스 지원**: Apple Watch, Samsung Galaxy Watch, Garmin 등
+- **운동 앱 연동**: Zwift, Wahoo, IGS Sport, Bryton, Suunto 등
+- **실시간 데이터 동기화**: 모든 기기에서의 운동 데이터 통합 관리
+
+### 👥 소셜 기능
+- **친구와의 경쟁**: 운동 기록을 통한 친구들과의 경쟁
+- **성과 공유**: 목표 달성과 개인 기록 공유
+- **커뮤니티**: 운동 관련 정보와 팁 공유
+
+## 🌐 다국어 지원
+
+- **한국어/영어 완전 지원**: 모든 페이지와 기능에서 언어 전환 가능
+- **실시간 언어 변경**: 페이지 새로고침 없이 즉시 언어 전환
+- **일관된 사용자 경험**: 모든 텍스트와 UI 요소의 완벽한 다국어 처리
+
+## 📁 프로젝트 구조
+
 ```
-location-terms-app
-├── src
-│   ├── index.html       # Main HTML document for terms of use
-│   ├── styles           # Directory for CSS styles
-│   │   └── main.css     # Styles for the HTML document
-│   └── scripts          # Directory for JavaScript files
-│       └── main.js      # JavaScript functionality for user interactions
-└── README.md            # Project documentation
+location-terms-app/
+├── src/
+│   ├── index.html              # 메인 랜딩 페이지 (운동 소개)
+│   ├── app.html                # 앱 소개 및 기능 설명 페이지
+│   ├── termsofservice.html     # 위치정보 처리방침 및 개인정보 처리방침
+│   ├── styles/
+│   │   └── main.css            # 통합 스타일시트 (모든 페이지 공통)
+│   ├── scripts/
+│   │   └── main.js             # 통합 JavaScript (다국어 처리 및 동적 기능)
+│   ├── assets/                 # 운동 관련 SVG 아이콘들
+│   │   ├── bg-all-sports.svg
+│   │   ├── bg-cycle.svg
+│   │   ├── bg-gym.svg
+│   │   ├── bg-hiking.svg
+│   │   ├── bg-running.svg
+│   │   └── ...
+│   └── mocial-app-icon.svg     # Mocial 앱 아이콘
+└── README.md
 ```
 
-## Setup Instructions
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Open `src/index.html` in a web browser to view the terms of use.
+## 🎨 디자인 특징
 
-## Usage
-- The application presents the terms of use regarding location information.
-- Users can interact with the document to understand how their location data will be used and managed.
+### 현대적이고 세련된 UI/UX
+- **그라데이션 배경**: 시각적으로 매력적인 그라데이션 효과
+- **플로팅 애니메이션**: 카드와 요소들의 부드러운 플로팅 효과
+- **반응형 디자인**: 모든 디바이스에서 최적화된 레이아웃
+- **인터랙티브 요소**: 호버 효과와 클릭 애니메이션
 
-## Contact Information
-For any inquiries or feedback regarding the terms of use, please contact the project maintainer at [your-email@example.com].
+### 트렌디한 색상 팔레트
+- **주요 색상**: 블루 그라데이션 (#667eea → #764ba2)
+- **강조 색상**: 오렌지 (#ff6b6b), 그린 (#4ecdc4)
+- **배경**: 다크 테마 기반의 모던한 디자인
+
+## 🚀 기술 스택
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **스타일링**: CSS Grid, Flexbox, CSS Animations
+- **반응형**: Mobile-first 접근법
+- **다국어**: JavaScript 기반 동적 언어 전환
+- **아이콘**: SVG 기반 벡터 아이콘
+
+## 📱 페이지별 상세 기능
+
+### 1. index.html (메인 랜딩 페이지)
+- **히어로 섹션**: 임팩트 있는 메인 메시지와 CTA
+- **운동 통계**: 활성 사용자, 월간 기록, 달성률 등 핵심 지표
+- **플로팅 카드**: 러닝, 자전거, 등산, 헬스 등 운동 종목별 미리보기
+- **애니메이션 효과**: 파티클 배경과 부드러운 카드 애니메이션
+
+### 2. app.html (앱 소개 페이지)
+- **핵심 기능 소개**: 4가지 주요 기능 카드 (스마트 목표, 실시간 추적, 소셜 경쟁, 상세 분석)
+- **기기 연동 섹션**: 다양한 스마트 디바이스와 앱 연동 정보
+- **통계 대시보드**: 주간 활동 차트와 운동 분포 파이 차트
+- **앱 스토어 링크**: App Store, Google Play 다운로드 링크
+
+### 3. termsofservice.html (정책 페이지)
+- **위치정보 처리방침**: 8개 조항의 상세한 위치정보 수집 및 사용 정책
+- **개인정보 처리방침**: 9개 조항의 포괄적인 개인정보 보호 정책
+- **탭 네비게이션**: 두 정책 간 쉬운 전환
+- **완전한 다국어 지원**: 모든 정책 내용의 한국어/영어 번역
+
+## 🛠️ 설치 및 실행
+
+1. **저장소 클론**
+   ```bash
+   git clone [repository-url]
+   cd location-terms-app
+   ```
+
+2. **웹 서버 실행**
+   ```bash
+   # Python 3 사용 시
+   python -m http.server 8000
+   
+   # Node.js 사용 시
+   npx http-server
+   ```
+
+3. **브라우저에서 접속**
+   ```
+   http://localhost:8000/src/
+   ```
+
+## 📋 주요 특징
+
+### ✅ 완성된 기능
+- [x] 완전한 다국어 지원 (한국어/영어)
+- [x] 반응형 디자인 (모바일, 태블릿, 데스크톱)
+- [x] 현대적인 UI/UX 디자인
+- [x] 인터랙티브 애니메이션
+- [x] 통합된 스타일시트 및 스크립트
+- [x] 상세한 정책 문서
+- [x] 다양한 운동 종목 지원
+
+### 🔄 향후 개발 계획
+- [ ] 실제 앱 스토어 링크 연결
+- [ ] 사용자 인증 시스템
+- [ ] 실시간 데이터 동기화
+- [ ] 푸시 알림 기능
+- [ ] 소셜 로그인 연동
+
+## 📞 문의 및 지원
+
+프로젝트에 대한 문의사항이나 피드백이 있으시면 언제든지 연락주세요.
+
+---
+
+**Mocial** - 운동과 소셜의 만남으로 더 건강한 라이프스타일을 만들어가세요! 🏃‍♂️💪
