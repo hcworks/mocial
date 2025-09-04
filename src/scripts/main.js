@@ -114,6 +114,7 @@ const content = {
         ctaSubtitle: "스마트한 운동 관리로 목표를 달성하고 친구들과 함께 성장하세요",
         storeTitle: "앱 스토어",
         storeDesc: "출시와 함께 아래 링크가 활성화됩니다.",
+        storeNote: "스토어 링크는 준비 중입니다. 출시 시 실제 링크로 업데이트됩니다.",
         appStore: "App Store",
         playStore: "Google Play",
         
@@ -383,6 +384,7 @@ const content = {
         ctaSubtitle: "Achieve your goals with smart exercise management and grow together with friends",
         storeTitle: "App Stores",
         storeDesc: "Links will be enabled at launch.",
+        storeNote: "Store links are being prepared. They will be updated with actual links upon release.",
         appStore: "App Store",
         playStore: "Google Play",
         
@@ -658,6 +660,7 @@ function setLanguage(lang) {
     updateElement('cta-subtitle', data.ctaSubtitle);
     updateElement('store-title', data.storeTitle);
     updateElement('store-desc', data.storeDesc);
+    updateElement('store-note', data.storeNote);
     // 아이콘 링크는 텍스트를 바꾸지 않음 (접근성 라벨만 업데이트 필요 시 여기서 처리 가능)
     
     // 위치정보 처리방침
