@@ -3,227 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mocial - 위치정보 처리방침 및 개인정보 처리방침</title>
+    <title>Mocial - 운동과 소셜의 만남</title>
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Mocial 앱 아이콘 -->
     <link rel="icon" type="image/svg+xml" href="mocial-app-icon.svg">
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .page-header {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem 3rem;
-            text-align: center;
-            color: #fff;
-            position: relative;
-        }
-        
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
-            border-radius: 20px;
-            margin: 2rem;
-            z-index: -1;
-        }
-        
-        .page-header h2 { 
-            font-size: 2.5rem; 
-            margin-bottom: 1rem; 
-            font-weight: 700;
-            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #fff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .page-header p { 
-            opacity: 0.95; 
-            font-size: 1.1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 2rem auto 4rem;
-            padding: 0 2rem;
-        }
-        
-        .policy-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 8px 25px rgba(0,0,0,0.05);
-            padding: 1.5rem 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .policy-nav::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
-        }
-        
-        .policy-nav ul {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .policy-nav a {
-            color: #2d3748;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-        }
-        
-        .policy-nav a:hover {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            transform: translateY(-2px);
-        }
-        
-        .policy-section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 8px 25px rgba(0,0,0,0.05);
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .policy-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
-        }
-        
-        .policy-section h2 {
-            margin: 0 0 2rem;
-            color: #1a202c;
-            font-size: 1.75rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .policy-article {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            border: 1px solid rgba(102, 126, 234, 0.1);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .policy-article:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
-            border-color: rgba(102, 126, 234, 0.2);
-        }
-        
-        .policy-article h3 {
-            margin: 0 0 1rem;
-            color: #2d3748;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .policy-article p {
-            margin: 0 0 1rem;
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        .policy-article ul {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-        
-        .policy-article li {
-            margin-bottom: 0.5rem;
-            color: #4a5568;
-            line-height: 1.5;
-        }
-        
-        .contact-info {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-        }
-        
-        .contact-info p {
-            margin: 0.5rem 0;
-            font-weight: 500;
-        }
-        
-        header {
-            background: url('assets/bg-all-sports.svg') center/cover no-repeat;
-            position: relative;
-        }
-        
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
-            z-index: 1;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .page-header {
-            position: relative;
-            z-index: 2;
-        }
-        
-        @media (max-width: 768px) {
-            .page-header h2 { font-size: 2rem; }
-            .page-header { padding: 3rem 1.5rem 2rem; }
-            .policy-section { padding: 1.5rem; }
-            .policy-nav { padding: 1rem; }
-            .policy-nav ul { flex-direction: column; gap: 1rem; }
-        }
-    </style>
 </head>
-<body>
+<body class="intro-page">
+    <!-- 배경 파티클 -->
+    <div class="bg-particles" id="bg-particles"></div>
+    
     <header>
         <div class="header-content">
             <div class="company-logo">
@@ -233,163 +20,212 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a id="menu-intro" href="intro.html">홈</a></li>
+                    <li><a id="menu-intro" href="index.html">홈</a></li>
                     <li><a id="menu-app" href="app.html">앱 소개</a></li>
-                    <li><a id="menu-location" href="#location-policy">위치정보 처리방침</a></li>
-                    <li><a id="menu-privacy" href="#privacy-policy">개인정보 처리방침</a></li>
+                    <li><a id="menu-location" href="termsofservice.html#location-policy">위치정보 처리방침</a></li>
+                    <li><a id="menu-privacy" href="termsofservice.html#privacy-policy">개인정보 처리방침</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <button id="btn-ko" class="lang-btn active">한국어</button>
+                <button id="btn-ko" class="lang-btn">한국어</button>
                 <button id="btn-en" class="lang-btn">English</button>
             </div>
         </div>
         <div class="page-header">
-            <h2 id="title">위치정보 처리방침 및 개인정보 처리방침</h2>
-            <p id="effective-date">시행일자: 2025년 1월 1일</p>
+            <h2 id="intro-title">Mocial</h2>
+            <p id="intro-subtitle">자전거, 러닝, 등산, 헬스... 열심히 운동하고 친구들과 공유하며 경쟁하세요!</p>
+            <div class="intro-cta">
+                <a href="app.html" id="cta-app-link" class="ripple">앱 소개 보기</a>
+                <a href="termsofservice.html" id="cta-policy-link" class="ripple">정책 보기</a>
+            </div>
         </div>
     </header>
-    <main>
-        <div style="height:30px;"></div>
-        <nav class="policy-nav">
-            <ul>
-                <li><a href="#location-policy" id="nav-location">위치정보 처리방침</a></li>
-                <li><a href="#privacy-policy" id="nav-privacy">개인정보 처리방침</a></li>
-            </ul>
-        </nav>
 
-        <!-- 위치정보 처리방침 -->
-        <section id="location-policy" class="policy-section">
-            <h2 id="location-title">위치정보 처리방침</h2>
+    <main class="intro-main">
+        <!-- 히어로 섹션 -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
             
-            <article class="policy-article">
-                <h3 id="location-article1-title">제1조 (목적)</h3>
-                <p id="location-article1-content">Mocial(이하 "회사"라 합니다)는 위치정보의 보호 및 이용 등에 관한 법률 제16조의 규정에 따라 개인위치정보를 안전하게 처리하고 있음을 알려드리며, 본 처리방침을 제정하여 공개합니다.</p>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="location-article2-title">제2조 (위치정보의 수집·이용·제공)</h3>
-                <div id="location-article2-content">
-                    <p>회사는 개인위치정보를 수집하기 위하여 개인위치정보주체의 동의를 받을 때에는 다음 각 호의 사항을 고지하고 동의를 받습니다.</p>
-                    <ul id="location-consent-items">
-                        <li>개인위치정보의 수집·이용·제공 목적</li>
-                        <li>개인위치정보의 수집방법 및 수집항목</li>
-                        <li>개인위치정보의 보유·이용기간</li>
-                        <li>개인위치정보의 제3자 제공에 관한 사항</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="location-article3-title">제3조 (개인위치정보주체의 권리)</h3>
-                <div id="location-article3-content">
-                    <p>개인위치정보주체는 언제든지 개인위치정보의 수집·이용·제공에 대한 동의를 철회할 수 있습니다.</p>
-                    <ul id="location-rights-items">
-                        <li>개인위치정보 수집·이용·제공 동의철회권</li>
-                        <li>개인위치정보 및 위치정보 수집·이용·제공사실 확인자료에 대한 열람·고지요구권</li>
-                        <li>개인위치정보의 삭제·정정요구권</li>
-                        <li>손해배상청구권</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="location-article4-title">제4조 (법정대리인의 권리)</h3>
-                <p id="location-article4-content">회사는 14세 미만 아동으로부터 개인위치정보를 수집·이용하고자 하는 경우에는 법정대리인의 동의를 받습니다. 법정대리인은 아동의 개인위치정보 수집·이용·제공에 동의하거나 그 동의를 철회할 수 있으며, 아동의 권리를 대리하여 행사할 수 있습니다.</p>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="location-article5-title">제5조 (위치정보관리책임자)</h3>
-                <div id="location-article5-content">
-                    <p>회사는 위치정보를 적절히 관리·보호하고 개인위치정보주체의 불만을 원활히 처리할 수 있도록 다음과 같이 위치정보관리책임자를 지정하여 운영하고 있습니다.</p>
-                    <div class="contact-info">
-                        <p id="location-manager-info">위치정보관리책임자: 개인정보보호팀</p>
-                        <p id="location-contact-info">연락처: privacy@mocial.com</p>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">New</span>
+                        <span class="badge-desc">운동의 새로운 패러다임</span>
+                    </div>
+                    
+                    <h1 class="hero-title" id="hero-main-title">
+                        <span class="title-line">운동을</span>
+                        <span class="title-line highlight">재정의하다</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle" id="hero-subtitle">
+                        혼자서는 불가능했던 목표를<br>
+                        친구들과 함께 달성하세요
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="app.html" class="cta-button primary" id="cta-start">
+                            <span>시작하기</span>
+                            <svg class="cta-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="termsofservice.html" class="cta-button secondary" id="cta-learn">
+                            <span>더 알아보기</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="10000">51K</div>
+                            <div class="stat-label" id="stat-active-users">활성 사용자</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50000">15</div>
+                            <div class="stat-label" id="stat-monthly-records">월간 기록</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="85">84%</div>
+                            <div class="stat-label" id="stat-achievement-rate">달성률</div>
+                        </div>
                     </div>
                 </div>
-            </article>
-        </section>
-
-        <!-- 개인정보 처리방침 -->
-        <section id="privacy-policy" class="policy-section">
-            <h2 id="privacy-title">개인정보 처리방침</h2>
-            
-            <article class="policy-article">
-                <h3 id="privacy-article1-title">제1조 (개인정보의 처리목적)</h3>
-                <div id="privacy-article1-content">
-                    <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
-                    <ul id="privacy-purpose-items">
-                        <li>회원가입 및 관리</li>
-                        <li>서비스 제공</li>
-                        <li>고충처리</li>
-                        <li>마케팅 및 광고에의 활용</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="privacy-article2-title">제2조 (개인정보의 처리 및 보유기간)</h3>
-                <div id="privacy-article2-content">
-                    <p>회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
-                    <ul id="privacy-retention-items">
-                        <li>회원가입정보: 회원탈퇴 시까지</li>
-                        <li>서비스 이용기록: 5년</li>
-                        <li>결제기록: 5년</li>
-                        <li>민원처리기록: 3년</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="privacy-article3-title">제3조 (개인정보의 제3자 제공)</h3>
-                <p id="privacy-article3-content">회사는 개인정보를 제1조(개인정보의 처리목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보보호법 제17조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="privacy-article4-title">제4조 (정보주체의 권리·의무 및 행사방법)</h3>
-                <div id="privacy-article4-content">
-                    <p>정보주체는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
-                    <ul id="privacy-rights-items">
-                        <li>개인정보 처리정지 요구</li>
-                        <li>개인정보 열람요구</li>
-                        <li>개인정보 정정·삭제요구</li>
-                        <li>개인정보 처리정지 요구</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="policy-article">
-                <h3 id="privacy-article5-title">제5조 (개인정보보호책임자)</h3>
-                <div id="privacy-article5-content">
-                    <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보보호책임자를 지정하고 있습니다.</p>
-                    <div class="contact-info">
-                        <p id="privacy-manager-info">개인정보보호책임자: 개인정보보호팀</p>
-                        <p id="privacy-contact-info">연락처: privacy@mocial.com</p>
-                        <p id="privacy-phone-info">전화번호: 02-1234-5678</p>
+                
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="floating-card card-1">
+                            <div class="card-icon">🚴‍♂️</div>
+                            <div class="card-content">
+                                <div class="card-title" id="card-cycling-title">자전거</div>
+                                <div class="card-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="progress-text" id="card-cycling-progress">85% 완료</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-2">
+                            <div class="card-icon">🏃‍♂️</div>
+                            <div class="card-content">
+                                <div class="card-title" id="card-running-title">러닝</div>
+                                <div class="card-stats">
+                                    <div class="stat" id="card-running-distance">5.2km</div>
+                                    <div class="stat" id="card-running-time">32분</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-3">
+                            <div class="card-icon">🥾</div>
+                            <div class="card-content">
+                                <div class="card-title" id="card-hiking-title">등산</div>
+                                <div class="card-achievement">
+                                    <div class="achievement-badge">🏆</div>
+                                    <span id="card-hiking-achievement">목표 달성!</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-4">
+                            <div class="card-icon">💪</div>
+                            <div class="card-content">
+                                <div class="card-title" id="card-fitness-title">헬스</div>
+                                <div class="card-calories">
+                                    <span class="calories-number">420</span>
+                                    <span class="calories-unit">kcal</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
-        
-        <div style="height:30px;"></div>
+
+        <!-- 특징 섹션 -->
+        <section class="features-section">
+            <div class="features-container">
+                <div class="features-header">
+                    <h2 class="section-title" id="features-title">왜 Mocial인가?</h2>
+                    <p class="section-subtitle" id="features-subtitle">혁신적인 기능으로 운동을 완전히 새롭게 경험하세요</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 id="feature-smart-goals-title">스마트 목표 설정</h3>
+                        <p id="feature-smart-goals-desc">AI가 분석한 개인 데이터를 바탕으로 최적의 목표를 제안합니다</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 id="feature-social-exercise-title">소셜 운동</h3>
+                        <p id="feature-social-exercise-desc">친구들과 실시간으로 운동을 공유하고 서로 격려하세요</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M3 3v18h18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 id="feature-detailed-analysis-title">상세 분석</h3>
+                        <p id="feature-detailed-analysis-desc">운동 데이터를 깊이 분석하여 개선점을 찾아드립니다</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 섹션 -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2 id="final-cta-title">지금 시작하세요</h2>
+                    <p id="final-cta-desc">운동의 새로운 경험을 친구들과 함께해보세요</p>
+                    <div class="cta-buttons">
+                        <a href="app.html" class="cta-button primary large" id="cta-download">
+                            <span>앱 다운로드</span>
+                            <svg class="cta-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="footer-content">
-            <div class="company-info">
-                <h4>Mocial</h4>
-                <p id="footer-address">주소: 서울특별시 강남구 테헤란로 123길 45, 6층</p>
-                <p id="footer-contact">대표전화: 02-1234-5678 | 이메일: contact@mocial.com</p>
-                <p id="footer-business">사업자등록번호: 123-45-67890</p>
-            </div>
             <div class="footer-links">
-                <a href="intro.html" id="footer-intro">홈</a>
+                <a href="index.html" id="footer-intro">홈</a>
                 <a href="app.html" id="footer-app">앱 소개</a>
-                <a href="#location-policy" id="footer-location">위치정보 처리방침</a>
-                <a href="#privacy-policy" id="footer-privacy">개인정보 처리방침</a>
+                <a href="termsofservice.html#location-policy" id="footer-location">위치정보 처리방침</a>
+                <a href="termsofservice.html#privacy-policy" id="footer-privacy">개인정보 처리방침</a>
             </div>
         </div>
         <p id="footer-copyright">&copy; 2025 Mocial. All rights reserved.</p>
     </footer>
+
     <script src="scripts/main.js"></script>
 </body>
 </html>
